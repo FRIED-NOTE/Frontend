@@ -111,7 +111,6 @@ function InputBox({
         <Group gap={13} css={{ overflowX: 'scroll', flexWrap: 'nowrap' }}>
           {selectedTags.map(({ label, value }: TagDataType, index: number) => (
             <Tag
-              onClick={handleTagClick}
               onClose={handleTagClose}
               key={`${label}-${value}-${index}`}
               value={value}

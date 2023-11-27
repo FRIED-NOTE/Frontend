@@ -83,7 +83,11 @@ function Tag({
           backgroundColor: color,
           color: color && DesignSystem.Color.background.white,
         }}
-        onClick={(e) => e.target === e.currentTarget && onClick?.(e, value)}
+        onClick={(e) =>
+          e.target === e.currentTarget && onClick
+            ? onClick(e, value)
+            : onClose?.(e, value)
+        }
         {...props}
       >
         {label || children}
