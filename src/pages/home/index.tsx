@@ -72,7 +72,7 @@ const mockTagData = [
   { value: 'ingr-5', label: '# 재료 5' },
 ];
 
-const mockRecipeData: RecipeProps[] = Array(14).fill({
+export const mockRecipeData: RecipeProps[] = Array(14).fill({
   author: '해피밀',
   contents: `소스 : 스리라차 소스, 요거트 소스
 반죽 : 밀가루, 계란

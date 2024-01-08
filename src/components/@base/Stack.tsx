@@ -1,4 +1,4 @@
-import { CSSProperties, HTMLAttributes } from 'react';
+import { CSSProperties, HTMLAttributes, forwardRef } from 'react';
 
 export interface StackProps extends HTMLAttributes<HTMLDivElement> {
   justify?: CSSProperties['justifyContent'];
@@ -6,13 +6,17 @@ export interface StackProps extends HTMLAttributes<HTMLDivElement> {
   spacing?: CSSProperties['gap'];
 }
 
-function Stack({
-  children,
-  justify: justifyContent = 'center',
-  align: alignItems = 'stretch',
-  spacing: gap,
-  ...props
-}: StackProps) {
+const Stack = forwardRef<HTMLDivElement, StackProps>(function Stack(
+  {
+    children,
+    justify: justifyContent = 'center',
+    align: alignItems = 'stretch',
+    spacing: gap,
+    ...props
+  }: StackProps,
+  ref,
+) {
+  const inputRef = ref;
   return (
     <div
       css={{
@@ -22,11 +26,12 @@ function Stack({
         alignItems,
         gap,
       }}
+      ref={inputRef}
       {...props}
     >
       {children}
     </div>
   );
-}
+});
 
 export default Stack;

@@ -1,0 +1,85 @@
+:root {
+  --primary_yellow: #ffe24c;
+  --text_black: #292929;
+  --text_gray: #9ea6b1;
+}
+.SingleDatePicker_picker * {
+  font-family: Pretendard;
+  color: var(--text_black);
+  font-style: normal;
+}
+.SingleDatePicker_picker {
+  z-index: 3;
+}
+/*인풋박스*/
+.SingleDatePicker * {
+  width: 222px;
+  height: 35px;
+  box-sizing: border-box;
+  background: transparent;
+}
+.SingleDatePickerInput {
+  background: transparent;
+}
+.DateInput {
+  background: transparent;
+}
+.DateInput_input {
+  font-family: Pretendard;
+  width: 222px;
+  box-sizing: border-box;
+  background: transparent;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--text_black);
+  border: none;
+  padding-left: 0;
+}
+.DateInput_input::placeholder {
+  color: var(--text_gray);
+}
+/*캘린더 연월 텍스트*/
+.CalendarMonth_caption {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 165%;
+  padding: 16px 0 80px 0;
+}
+.DayPicker_weekHeader {
+  top: 90px;
+}
+/*요일 텍스트*/
+.DayPicker_weekHeader_ul {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+}
+
+/*날짜 텍스트*/
+.CalendarDay__default {
+  border: none;
+  color: var(--text_black);
+}
+.CalendarDay:hover {
+  border: none;
+  background-color: #fff;
+  color: var(--text_black);
+}
+.CalendarDay__blocked_out_of_range {
+  color: var(--text_gray);
+}
+.CalendarDay__blocked_out_of_range:hover {
+  color: var(--text_gray);
+}
+.CalendarDay__outside {
+  color: var(--text_gray);
+}
+.CalendarDay__selected {
+  background: var(--primary_yellow);
+  border-radius: 100%;
+}
+.CalendarDay__selected:hover {
+  background: var(--primary_yellow);
+  border-radius: 100%;
+  border: none;
+}
